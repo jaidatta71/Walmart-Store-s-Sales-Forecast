@@ -38,3 +38,21 @@ Target variable: Weekly_Sales (sales for the given department in the given store
 Target Submission File:
 For each row in the test set (store + department + date triplet), predict the weekly sales of that department. The Id column is formed by concatenating the Store, Dept, and Date with underscores (e.g. Store_Dept_2012-11-02).   
 
+
+Data Clean up approach:
+Droped records if all the values are Null, Only ststus = Clean, Non Salved Cars, Keep data from year: 2000 only, Keep only Non Zero Priced cars
+Delete Duplicate VINs and keep only one record & Dropped Duplicate VINs
+Simplify Model list in a new column "model_short". Keep top N models per MANUFACTURER; Rest group it under "others".
+Data infusion for NULL records like a. Add values to missing data for SIZE & TYPE. If type = truck, van, bus Update size = "full-size" etc..
+Feature engineering:
+Create new features that are easy for more meaningful for car business: like No.of years(age), Miles driven per year, Odometer Reading (price per mile)
+Treat outliers with LOG transformation.
+Pipe line construction after addressing Low cardinality & High Cardinality columns
+Low cardinality: OHE
+Hifg Cardinality: TargetEncoding
+Numeric: Median
+Model Prediction by LGBMRegressor Model
+With # of estimators=1000 with 5 fold cross validation
+
+Evaluation Metrics:
+Test RMSE: 0.07 Test MAE: 0.03 Test R²: 0.995
