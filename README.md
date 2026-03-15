@@ -1,4 +1,4 @@
-# Walmart-Store-s-Sales-Forecast
+# Walmart-Stores-Sales-Forecast
 Kaggle's Walmart challenge: Modelling weekly sales. In this notebook, we use data from Walmart to forecast their store's weekly sales.
 
 
@@ -14,11 +14,11 @@ This project applies regression model techniques. Evaluation is based on RMSE va
 ### Project Structure
 project-name/ Walmart Store's Sales Forecast
 
-├── data/                    # Dataset files
-├── notebooks/               # notebooks for exploration
-├── src/                     # Source code
-├── models/                  # Saved trained models
-├── results/                 # Output graphs / evaluation results
+├── data                     # Dataset files
+├── notebooks                # notebooks for exploration
+├── src                      # Source code
+├── models                   # Saved trained models
+├── results                  # Output graphs / evaluation results
 ├── requirements.txt         # Python dependencies
 └── README.md                # Project documentation
 
