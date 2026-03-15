@@ -14,13 +14,13 @@ This project applies regression model techniques. Evaluation is based on RMSE va
 ### Project Structure
 project-name/ Walmart Store's Sales Forecast
 
-├── data/                   # Dataset files
-├── notebooks/         # notebooks for exploration
+├── data/                    # Dataset files
+├── notebooks/               # notebooks for exploration
 ├── src/                     # Source code
-├── models/              # Saved trained models
-├── results/                # Output graphs / evaluation results
-├── requirements.txt     # Python dependencies
-└── README.md            # Project documentation
+├── models/                  # Saved trained models
+├── results/                 # Output graphs / evaluation results
+├── requirements.txt         # Python dependencies
+└── README.md                # Project documentation
 
 ### Dataset
 Dataset source:  [](https://www.kaggle.com/competitions/walmart-recruiting-store-sales-forecasting/data)
