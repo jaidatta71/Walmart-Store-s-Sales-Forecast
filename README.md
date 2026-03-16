@@ -84,6 +84,11 @@ Normalised RMSE using ExtraTr : 26.2
 
 ![predicted_vs_Actuals](Results Plots and Evaluation results/predicted_vs_Actuals.png)
 
+<img width="642" height="481" alt="image" src="https://github.com/user-attachments/assets/d4ed322c-f28b-46f6-a234-6e828059e8d4" 
+
+<img width="642" height="481" alt="image" src="https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png"
+
+
 https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png
 
 ### Residual Plot:
