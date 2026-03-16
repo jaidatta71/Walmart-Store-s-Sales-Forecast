@@ -16,8 +16,6 @@ project-name/ Walmart Store's Sales Forecast
 
 ├── Datasets
 
-├── Notebooks for exploration
-
 ├── src
 
 ├── Results Plots and Evaluation results
@@ -78,7 +76,7 @@ Select Features that impacts Weekly  Sales using:
 5. ExtraTr RMSE : 3184.1464
 6. RandomF RMSE : 3796.6128
 
-Normalised RMSE using the model ExtraTr : 26.2
+### Normalised RMSE using the model ExtraTrees : 26.2
 
 ### Prediction vs Actual Sales:
 <img src="Results Plots and Evaluation results/predicted_vs_Actuals.png" width="600">
