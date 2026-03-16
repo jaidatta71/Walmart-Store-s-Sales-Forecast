@@ -81,6 +81,9 @@ RandomF RMSE : 3796.6128
 Normalised RMSE using ExtraTr : 26.2
 
 ### Prediction vs Actual Sales:
+
+![predicted_vs_Actuals](Results Plots and Evaluation results/predicted_vs_Actuals.png)
+
 https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png
 
 ### Residual Plot:
