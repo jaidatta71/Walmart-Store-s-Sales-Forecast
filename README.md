@@ -71,25 +71,20 @@ Select Features that impacts Weekly  Sales using:
 6. RandomForest
 
 ### Evaluation Metrics:
-LGBM RMSE    : 6712.4683
-XGBoost RMSE : 5233.9659
-Catboost RMSE: 5354.7629
-HGBR RMSE    : 6677.4183
-ExtraTr RMSE : 3184.1464
-RandomF RMSE : 3796.6128
+1. LGBM RMSE    : 6712.4683
+2. XGBoost RMSE : 5233.9659
+3. Catboost RMSE: 5354.7629
+4. HGBR RMSE    : 6677.4183
+5. ExtraTr RMSE : 3184.1464
+6. RandomF RMSE : 3796.6128
 
-Normalised RMSE using ExtraTr : 26.2
+Normalised RMSE using the model ExtraTr : 26.2
 
 ### Prediction vs Actual Sales:
-
-![predicted_vs_Actuals](Results Plots and Evaluation results/predicted_vs_Actuals.png)
-
-<img width="642" height="481" alt="image" src="https://github.com/user-attachments/assets/d4ed322c-f28b-46f6-a234-6e828059e8d4" 
-
-<img width="642" height="481" alt="image" src="https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png"
-
-
-https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png
+<img src="Results Plots and Evaluation results/predicted_vs_Actuals.png" width="600">
 
 ### Residual Plot:
-https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/residual_plots.png
+<img src="Results Plots and Evaluation results/residual_plots.png" width="600">
+
+
+## Used ExtraTreesRegressor for predicting weekly sales of Test data. Update the predicted sales into sample_submission file for corresponding Stores, Dept and Date combination
