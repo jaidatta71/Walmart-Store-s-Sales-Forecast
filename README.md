@@ -14,13 +14,13 @@ This project applies regression model techniques. Evaluation is based on RMSE va
 ### Project Structure
 project-name/ Walmart Store's Sales Forecast
 
-├── dataset files
+├── Datasets
 
-├── notebooks for exploration
+├── Notebooks for exploration
 
-├── src(Source code)
+├── src
 
-├── results Output graphs and evaluation results
+├── Results Plots and Evaluation results
 
 └── README.md   
 
@@ -40,24 +40,44 @@ Target variable: Weekly_Sales (sales for the given department in the given store
 Target Submission File:
 For each row in the test set (store + department + date triplet), predict the weekly sales of that department. The Id column is formed by concatenating the Store, Dept, and Date with underscores (e.g. Store_Dept_2012-11-02).   
 
-
 ### Data Clean up approach:
-Droped records if all the values are Null, Only ststus = Clean, Non Salved Cars, Keep data from year: 2000 only, Keep only Non Zero Priced cars
-Delete Duplicate VINs and keep only one record & Dropped Duplicate VINs
-Simplify Model list in a new column "model_short". Keep top N models per MANUFACTURER; Rest group it under "others".
-Data infusion for NULL records like a. Add values to missing data for SIZE & TYPE. If type = truck, van, bus Update size = "full-size" etc..
+Fill all missing values with zero.
 ### Feature engineering:
-Create new features that are easy for more meaningful for car business: like No.of years(age), Miles driven per year, Odometer Reading (price per mile)
-Treat outliers with LOG transformation.
+1. Convert Date Columns to Date, Week, Month
+2. Calculate # of days to Christmas for each week & # of days to Thanksgiving for each week
+3. Mark the long weekends & it's week as "1" based on the week it occurs in a year. For e.g., Thanksgiving is on 47th week, SuperBowl on 6th week, and LaborDay on 36th week
 
+### Target variable - Sales Data Analysis
+1. Obervation: Sales remain relatively stable throughout the year, except a dip around week 42 and a subsequent resurgence during the holiday season
+2. Observation: Markdowns (MDs) play a significant role in boosting sales during the beginning and end of the year
+3. Observation: Negative Correlation exists between Temperature and Sales
+4. Observation: No clear Correlation exists between Fuel price and Sales as it goes down and up
+5. Obervation : As the unemployment rate increases Sales decreases
+6. Obervation : As the Store size increases Sales increases
+7. Obervation on Store Type:  Store type "C" contributes to sales though their number is less
+8. Correlation BAR Chart: Display Store, Dept are positively related and CPI & Unemployment are negatively related with Weekly_sales
+    
 ### Identification of Features making the impact
+Select Features that impacts Weekly  Sales using:
+1. feature_importances_ (XGBoost built-in function)
+2. Permutation Importance (ELI5)
 
-### Pipe line construction after addressing Low cardinality & High Cardinality columns
-Low cardinality: OHE
-Hifg Cardinality: TargetEncoding
-Numeric: Median
-Model Prediction by LGBMRegressor Model
-With # of estimators=1000 with 5 fold cross validation
+### Modeling - Used below Regressor Models for Prediction
+1. LGBM
+2. XGB
+3. CatBoost
+4. HistGradientBoosting
+5. ExtraTrees
+6. RandomForest
 
 ### Evaluation Metrics:
-Test RMSE: 0.07 Test MAE: 0.03 Test R²: 0.995
+
+LGBM RMSE    : 6712.4683
+XGBoost RMSE : 5233.9659
+Catboost RMSE: 5354.7629
+HGBR RMSE    : 6677.4183
+ExtraTr RMSE : 3184.1464
+RandomF RMSE : 3796.6128
+
+
+
