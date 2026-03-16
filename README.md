@@ -71,7 +71,6 @@ Select Features that impacts Weekly  Sales using:
 6. RandomForest
 
 ### Evaluation Metrics:
-
 LGBM RMSE    : 6712.4683
 XGBoost RMSE : 5233.9659
 Catboost RMSE: 5354.7629
@@ -79,5 +78,10 @@ HGBR RMSE    : 6677.4183
 ExtraTr RMSE : 3184.1464
 RandomF RMSE : 3796.6128
 
+Normalised RMSE using ExtraTr : 26.2
 
+### Prediction vs Actual Sales:
+https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/predicted_vs_Actuals.png
 
+### Residual Plot:
+https://github.com/jaidatta71/Walmart-Store-s-Sales-Forecast/blob/main/Results%20Plots%20and%20Evaluation%20results/residual_plots.png
